@@ -16,6 +16,32 @@ I led the spatial part of the project: where taxi demand is concentrated and whe
 - **Hotspot detection:** flagged zones where pickups far exceed the average. The top hotspots are JFK Airport, Midtown Center and Upper East Side North.
 - **Recommendations:** more cabs in the high-demand zones at peak times, and targeted coverage for underserved areas.
 
+### Figures
+
+**Top pickup zones:** JFK Airport leads, with Midtown Center (143,471 pickups) and Upper East Side South (142,708) close behind.
+![Top pickup zones](docs/top_pickup_zones.png)
+
+**Top drop-off zones:**
+![Top drop-off zones](docs/top_dropoff_zones.png)
+
+**Busiest routes:** trips within the Upper East Side dominate. Upper East Side South → North has about 22,000 trips.
+![Top routes](docs/top_routes.png)
+
+**Pickup density (kernel density estimate):** demand is concentrated in Midtown Manhattan, with a smaller cluster at LaGuardia.
+![Pickup density KDE](docs/pickup_density_kde.png)
+
+**Interactive heatmap (Folium/Leaflet), zoomed to Midtown:**
+![Interactive heatmap](docs/interactive_heatmap_midtown.jpg)
+
+**Hotspot map:** circles are sized by pickup volume and labeled with rank and count.
+- Manhattan: Midtown Center (#2, 143,471), Upper East Side South (#3, 142,708), Upper East Side North (#4, 136,465), Times Square/Theatre District (#6, 106,324), Lincoln Square East (#8, 104,080).
+![Hotspots Manhattan](docs/hotspots_manhattan.jpg)
+
+- Citywide, the airports stand out: JFK, and LaGuardia with 89,533 pickups. Most of Brooklyn and Queens shows very little yellow-cab demand.
+![Hotspots citywide](docs/hotspots_citywide.jpg)
+
+*The map and heatmap code isn't in this repo yet. The figures are from the project report.*
+
 ## Data
 [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page): Yellow Taxi, January 2024.
 - **2,964,624 trips × 19 columns** (Parquet)
