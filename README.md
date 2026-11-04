@@ -5,6 +5,17 @@ When, where and how New Yorkers take yellow cabs: exploratory and statistical an
 Final project for **DSE 501: Statistics for Data Analysts, Arizona State University (Fall 2024)**.
 Team: Aman Gupta, Isan Agrawal, Sruthi Keerthana Nuttakki, Sushma Niresh.
 
+## My contribution: geographic demand and hotspot analysis
+I led the spatial part of the project: where taxi demand is concentrated and where service is missing.
+- **Top zones:** ranked the most frequent pickup and drop-off zones across all five boroughs.
+  - Top pickup zones: JFK Airport and Midtown Center.
+  - Top drop-off zones: Upper East Side North and South, and Midtown Center.
+- **High-frequency routes:** found the busiest origin–destination pairs. Short trips within the Upper East Side (North ↔ South) are among the most common.
+- **Kernel density heatmap:** smoothed pickup density across NYC. It shows dense demand in Midtown Manhattan and at JFK, and sparse demand on Staten Island and in parts of the Bronx.
+- **Interactive map:** a zoomable density map for exploring demand down to block level.
+- **Hotspot detection:** flagged zones where pickups far exceed the average. The top hotspots are JFK Airport, Midtown Center and Upper East Side North.
+- **Recommendations:** more cabs in the high-demand zones at peak times, and targeted coverage for underserved areas.
+
 ## Data
 [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page): Yellow Taxi, January 2024.
 - **2,964,624 trips × 19 columns** (Parquet)
